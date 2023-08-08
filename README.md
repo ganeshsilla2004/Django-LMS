@@ -12,6 +12,25 @@ Built using the Django framework, the system offers a suite of robust features t
 - [Tadikonda Sai Manikanta]()
 
 
+
+# Project Directory Structure
+
+```
+Django-LMS/
+├── LICENSE
+├── README.md
+├── bin
+├── lib
+├── pyvenv.cfg
+├── src/
+│   ├── client
+│   ├── db.sqlite3
+│   └── manage.py
+└── ...
+```
+
+
+
 ## Features
 
 - **Educator-Centric:** Empower educators to effortlessly design courses, arrange materials, and manage assignments within an intuitive interface.

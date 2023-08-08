@@ -5,7 +5,9 @@ The SDP-18 Student Learning Management System is a powerful web-based applicatio
 Built using the Django framework, the system offers a suite of robust features tailored to cater to diverse educational needs:
 
 
-## TEAM 
+## CONTRIBUTORS
+
+CONTRIBUTORS
 
 - [Chalasani Kusuma Naga Sri]()
 - [Kamineni Naga Shreya]()

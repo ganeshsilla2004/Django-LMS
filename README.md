@@ -7,8 +7,8 @@ Built using the Django framework, the system offers a suite of robust features t
 
 ## TEAM 
 
-- [Kamineni Naga Shreya]()
 - [Chalasani Kusuma Naga Sri]()
+- [Kamineni Naga Shreya]()
 - [Tadikonda Sai Manikanta]()
 
 

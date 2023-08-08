@@ -20,12 +20,27 @@ Built using the Django framework, the system offers a suite of robust features t
 
 Get started with the SDP-18 Student Learning Management System by following these simple steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/SDP-18.git`
-2. Navigate to the project directory: `cd SDP-18`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Apply migrations: `python manage.py migrate`
-5. Start the development server: `python manage.py runserver`
-
+1. . **Clone the repository**:
+   ```sh
+   git clone https://github.com/yourusername/SDP-18.git
+2. Navigate to the project directory:
+   ```sh
+     cd Django-LMS
+3. Create a virtual environment using Python 3:
+   ```sh
+     virtualenv -p python3 .
+4. Activate the virtual environment:
+   ```sh
+     source ./bin/activate
+5. Install Django within the virtual environment:
+   ```sh
+     python manage.py runserver
+6. Navigate into the "src" folder:
+   ```sh
+     cd src
+7. Start the development server:
+   ```sh
+     python manage.py runserver
 ## Usage
 
 1. Register a new account as an educator or student.

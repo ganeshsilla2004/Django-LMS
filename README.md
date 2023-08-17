@@ -7,9 +7,6 @@ Built using the Django framework, the system offers a suite of robust features t
 
 ## CONTRIBUTORS
 
-
-- [Chalasani Kusuma Naga Sri]()
-- [Kamineni Naga Shreya]()
 - [Tadikonda Sai Manikanta](https://github.com/saitadikonda99)
 
 

@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-container {
+    display: flex;  
+    flex-direction: column;
+}
+
+.login-nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-left: 10%;
+    color: white;
+    gap: 10px;
+    font-size: 10px;
+    background-color: rgb(187, 36, 36);
+}
+
+.login-container-in {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    border: .1px solid black;
+    border-radius: 10px;
+    height: 60vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    gap: 20px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.login-one-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    width: 80%;
+    font-size: 15px;
+}
+
+.login-two-two  {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   gap: 10px;
+}
+
+.login-two-two input {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.login-three-three  {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+ }
+ 
+ .login-three-three input {
+     padding: 10px;
+     font-size: 15px;
+     border-radius: 10px;
+     border: 1px solid black;
+ }
+
+.login-four-four  {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.login-four-four a {
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.login-five-five {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+
+}
+
+.login-five-five button {
+    padding: 10px;
+    background-color: rgb(187, 36, 36);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.login-six-six {
+    font-size: 12px;
+}
+
+.login-six-six a{
+    color: blue;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.login-footer {
+    height: 10vh;
+    background-color: rgb(187, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+.login-footer a {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+}

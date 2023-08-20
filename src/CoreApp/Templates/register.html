@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+    <div class="register-container">
+         <div class="login-nav">
+            <span class="material-symbols-outlined">school</span>
+              <h1>Sai LMS</h1>
+          </div>
+          <div class="register-container-in">
+            <div class="register-form">
+              <form action="" method="post"> 
+                {% csrf_token %}
+                <div class="register-one-one">
+                  <h1>Begin by confirming the following information:</h1> 
+                </div>
+                <div class="register-two-two">
+                    <label for="id" name="id">Id no*</label>
+                    <input type="text" name="id">
+                </div>
+                <div class="register-three-three">
+                    <label for="username" name="username">Username*</label>
+                    <input type="text" name="username">
+                </div>
+                <div class="register-four-four">
+                    <label for="email" name="email">Email*</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="register-five-five">
+                    <h1>Please enter a password for your account. Passwords must include the following:</h1>
+                    <ul>
+                        <li>a lowercase letter (a-z)</li>
+                        <li>an uppercase letter (A-Z)</li>
+                        <li>a number (0-9)</li>
+                        <li>a special character (!@#$%)</li>
+                        <li>at least 12 characters</li>
+                    </ul>
+                </div>
+                <div class="register-six-six">
+                    <label for="password" name="password">Password*</label>
+                    <input type="text" name="password">
+                </div>
+                <div class="register-seven-seven">
+                    <label for="confirm_password" name="confirm_password">Confirm Password*</label>
+                    <input type="text" name="confirm_password">
+                </div>
+                <div class="register-eight-eight">
+                    <button>register</button>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p style="color: red;">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="login-footer">
+            <p> © 2023 saitadikonda. All rights reserved.</p>
+            <p>designed & developed by <span> 
+                <a href="https://github.com/saitadikonda99">Tadikonda sai manikanta</a>
+            </span> </p>
+        </div>
+    </div>
+{% endblock %}

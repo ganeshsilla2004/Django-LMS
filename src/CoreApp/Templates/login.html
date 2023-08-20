@@ -8,18 +8,23 @@
       </div>
         <div class="login-container-in">
             <div class="login-form">
-                <form action="">
+                <form action="" method="post">
+                    {%csrf_token%}
                     <div class="login-one-one">
                         <h1>Login</h1>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p style="color: red;">{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
                     </div>
                     <div class="login-two-two">
-                        <label for="email" name="email">Email*</label>
-                        <input type="text" name="email">
+                        <label for="username" name="username">Username*</label>
+                        <input type="text" name="username">
                     </div>
                     <div class="login-three-three">
                         <label for="password" name="password">Password*</label>
                         <input type="password" name="password">
-
                     </div>
                     <div class="login-four-four">
                         <a href="#">Forgot password?</a>
@@ -28,12 +33,12 @@
                         <button>Submit</button>
                     </div>
                     <div class="login-six-six">
-                        <p>Don't have an account? <a href="#">Sign up</a></p>
+                        <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
                     </div>
                 </form>
             </div>
         </div> 
-          <div class="login-box"></div>
+          
         <div class="login-footer">
             <p> © 2023 saitadikonda. All rights reserved.</p>
             <p>designed & developed by <span> 

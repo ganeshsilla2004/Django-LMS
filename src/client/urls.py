@@ -23,7 +23,7 @@ from  django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', login, name='login'),
+    path('', user_login, name='user_login'),
     path('register/', register, name='register'),
     path('home/', home, name='home'),
 ]

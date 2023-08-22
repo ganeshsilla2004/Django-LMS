@@ -1,9 +1,11 @@
 from django.shortcuts import render,redirect
 from .models import *
-from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import CustomUser  
+from django.contrib.auth.hashers import make_password  
+
 
 # Create your views here.
 
@@ -12,76 +14,78 @@ def home(request):
     return render(request, 'home.html')
 
 
-def login(request):
+def user_login(request):
 
     if request.method == 'POST':
-        username = request.POST.get('username')
+        id_no = request.POST.get('id_no')
         password = request.POST.get('password')
     
-        if username == 'admin@sai' and password == 'admin123':
+        if id_no == 'admin@sai' and password == 'admin123':
             return render(request, 'home.html')
     
-        if not User.objects.filter(username=username).exists():
-             messages.error(request, 'InvalidNo username')
-             return redirect('login')
+        if not CustomUser.objects.filter(id_no=id_no).exists():
+             messages.error(request, 'Invalid username')
+             return redirect('user_login')
     
-        user = authenticate(username = username, password = password)
-      
+        user = authenticate(username = id_no, password = password)
+
         if user is None:
-            messages.error( request, 'InvalidNo password')
-            return redirect('login')  
+            messages.error(request, 'Invalid password')
+            return redirect('user_login') 
     
         else:
             login(request, user)
-            return render(request, 'home.html')    
+            return redirect('home')  
         
     return render(request, 'login.html')    
 
-import re
+# import re
 
-def password_check(password):
-    pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%])[A-Za-z\d@!#$%]{12,}$"
-    return bool(re.match(pattern, password))
+# def password_check(password):
+#     pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%])[A-Za-z\d@!#$%]{12,}$"
+#     return bool(re.match(pattern, password))
 
 def register(request):
-    
     if request.method == 'POST':
-        
-        idNo = request.POST.get('id')
+        id_no = request.POST.get('id')
         username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
         
+        
         if password != confirm_password:
-            messages.error(request, 'Password does not match')
-            
-        if password_check(password):
-            messages.error(request, 'password must contain below mentioned characters')
-            
-        if username == '' or idNo == '' or email == '' or password == '':
-            messages.error(request, 'Username is required')
+            messages.error(request, 'Passwords do not match')
+            return redirect('register')
         
-        if User.objects.filter(username=username).exists():
+        # if not password_check(password):
+        #     messages.error(request, 'Password must meet specific requirements')
+        #     return redirect('register')
+            
+        if not (username and id_no and email and password):
+            messages.error(request, 'All fields are required')
+            return redirect('register')
+        
+        if CustomUser.objects.filter(username=username).exists():
             messages.error(request, 'Username already taken')
+            return redirect('register')
         
-        if User.objects.filter(idNo=idNo).exists():
-            messages.error(request, 'idNo no. already taken')
-            return redirect('register')    
+        if CustomUser.objects.filter(id_no=id_no).exists():
+            messages.error(request, 'ID number already taken')
+            return redirect('register')
         
-        user = User.objects.create_user(
-               idNo=idNo,
-               username=username, 
-               email=email,
-               password=password, 
-               confirm_password=confirm_password,
-               )
+ 
+        user = CustomUser.objects.create(
+            id_no=id_no,
+            username=username, 
+            email=email,
+            password = password,
+        )
         
-        user.set_password(password)
-        user.save()
-        
-        messages.success(request, 'successfully registered')
-        
+
+
+        messages.success(request, 'Successfully registered')
+        print("Received username:", password)
     
     return render(request, 'register.html')
 

@@ -13,6 +13,7 @@
 .login-nav {
     height: 10vh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid white;
     padding-left: 10%;
@@ -20,6 +21,31 @@
     gap: 10px;
     font-size: 10px;
     background-color: rgb(187, 36, 36);
+}
+
+.nav-one {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-two {
+    display: flex;
+    gap: 10px;
+    padding-right: 50px;
+}
+
+.nav-two button {
+    padding: 10px 20px;
+    background-color:white;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.nav-two a {
+    text-decoration: none;
+    color: red;
 }
 
 .login-container-in {

@@ -2,10 +2,19 @@
 
 {%block content%}
     <div class="login-container">
-      <div class="login-nav">
-        <span class="material-symbols-outlined">school</span>
-          <h1>Sai LMS</h1>
-      </div>
+        <div class="login-nav">
+            <div class="nav-one">
+             <span class="material-symbols-outlined">school</span>
+              <h1>Sai LMS</h1>
+            </div>
+            <div class="nav-two">
+                <button>
+                    <a href="{% url 'register' %}">
+                    register
+                    </a>
+                </button>
+            </div>
+          </div>
         <div class="login-container-in">
             <div class="login-form">
                 <form action="" method="post">
@@ -19,8 +28,8 @@
                         {% endif %}
                     </div>
                     <div class="login-two-two">
-                        <label for="id_no" name="id_no">Id no*</label>
-                        <input type="text" name="id_no">
+                        <label for="id_no" name="id">Id no*</label>
+                        <input type="text" name="id">
                     </div>
                     <div class="login-three-three">
                         <label for="password" name="password">Password*</label>

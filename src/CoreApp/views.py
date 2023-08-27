@@ -73,7 +73,7 @@ def register(request):
             return redirect('register')
         
  
-        user = CustomUser.objects.create(
+        user = CustomUser.objects.create_user(
             id_no=id_no,
             email=email,
             password = password,

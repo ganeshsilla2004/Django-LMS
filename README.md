@@ -60,25 +60,9 @@ The Assignments app manages the creation, submission, and grading of assignments
 
 The Quizzes app handles the creation and management of quizzes and assessments. It includes features for creating various types of questions, setting time limits, and calculating scores.
 
-## Notifications App
-
-The Notifications app manages sending notifications to users. This includes notifications about course updates, assignment due dates, new discussions, and more.
-
-## User Progress App
-
-The User Progress app tracks and displays user progress in courses. It showcases completed lessons, quizzes, assignments, and overall course completion percentage.
-
 ## Admin Dashboard App
 
 The Admin Dashboard app is dedicated to administrators, providing features to manage users, courses, content, and analytics within the LMS.
-
-## Static Pages App
-
-The Static Pages app is responsible for managing static content such as the home page, about page, contact page, and other informational pages.
-
-## Payments App
-
-If the LMS offers paid courses, the Payments app handles payment processing, subscription management, and invoices.
 
 Feel free to explore each app's directory to find more detailed information about its structure and functionality.
 

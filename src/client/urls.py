@@ -19,13 +19,13 @@ from django.urls import path
 from CoreApp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-from  django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from Dashboard.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', user_login, name='user_login'),
     path('register/', register, name='register'),
-    path('home/', home, name='home'),
+    path('dashboard/', dashboard, name='dashboard'),
 ]
 
 if settings.DEBUG:

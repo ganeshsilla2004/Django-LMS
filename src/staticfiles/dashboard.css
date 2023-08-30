@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-container-one {
+    display: flex;
+    border: 2px solid black;
+    height: 100vh;
+    width: 30%;
+}
+
+.dashboard-container-two {
+    display: flex;
+    height: 100vh;
+    width: 70%;
+}

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-container-one {
+    display: flex;
+    border: 2px solid black;
+    height: 100vh;
+    width: 30%;
+}
+
+.dashboard-container-two {
+    display: flex;
+    height: 100vh;
+    width: 70%;
+    border: 2px solid black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.db-profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    border: 2px solid pink;
+    height: 35vw;
+}
+
+.db-profile-one {
+    height: 5vw;
+    width: 100%;
+    color: white;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.db-profile-two {
+    height: 14vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.db-profile-two-in {
+    height: 14vw;
+    width: 50%;
+    border-radius: 50%;
+    border: .1px solid black;
+}
+
+.db-profile-three {
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid pink;
+}
+
+.db-profile-three-one {
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid pink;
+}
+
+.db-profile-three-two {
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid pink;
+}
+
+/* .db-profile-four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.db-profile-four button {
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+} */

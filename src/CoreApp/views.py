@@ -10,15 +10,12 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-
 # Create your views here.
 
-def home(request):
-    return render(request, 'home.html')
 
 def logout_page(request):
     logout(request)
-    return redirect('logout_page')
+    return redirect('user_login')
 
 def user_login(request):
     if request.method == 'POST':
@@ -26,7 +23,7 @@ def user_login(request):
         password = request.POST.get('password')
         
         if id_no == 'admin@sai' and password == 'admin123':
-            return render(request, 'home.html')
+            return render(request, 'dashboard.html')
         
         try:
             user = CustomUser.objects.get(id_no=id_no)
@@ -41,7 +38,7 @@ def user_login(request):
             return redirect('user_login')
         
         login(request, authenticated_user)
-        return redirect('home')
+        return redirect('dashboard.html')
     
     return render(request, 'login.html')
 
@@ -72,7 +69,6 @@ def register(request):
             messages.error(request, 'id_no number already taken')
             return redirect('register')
         
- 
         user = CustomUser.objects.create_user(
             id_no=id_no,
             email=email,

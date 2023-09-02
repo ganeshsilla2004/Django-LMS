@@ -28,7 +28,6 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
-    border: 2px solid pink;
     height: 35vw;
 }
 
@@ -64,7 +63,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid pink;
 }
 
 .db-profile-three-one {
@@ -82,7 +80,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid pink;
 }
 
 /* .db-profile-four {

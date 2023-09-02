@@ -22,7 +22,7 @@ def user_login(request):
         id_no = request.POST.get('id')
         password = request.POST.get('password')
         
-        if id_no == 'admin@sai' and password == 'admin123':
+        if id_no == 'admin@sai' and password == 'admin1234':
             return render(request, 'dashboard.html')
         
         try:

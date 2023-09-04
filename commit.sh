@@ -8,6 +8,11 @@ read commit_message
 echo "Enter the branch name : "
 read branch_name
 
+# Enter the remote name 
+
+echo "Enter the remote name : "
+read remote_name
+
 # adding the commits
 git add .
 
@@ -15,4 +20,4 @@ git add .
 git commit -m "$commit_message"
 
 # push it
-git push origin "$branch_name"
+git push "$remote_name" "$branch_name"
